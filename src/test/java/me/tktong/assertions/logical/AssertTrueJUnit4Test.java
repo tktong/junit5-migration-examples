@@ -4,7 +4,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * JUnit4 uses assertion methods from {@link org.junit.Assert}
+ * JUnit4 uses assertion methods from {@link org.junit.Assert}. Note that in JUnit4, the failure message parameter comes
+ * prior to the condition.
  */
 public class AssertTrueJUnit4Test {
     @Test
