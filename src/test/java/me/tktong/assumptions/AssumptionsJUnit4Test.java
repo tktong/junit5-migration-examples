@@ -1,4 +1,4 @@
-package me.tktong.annotations.assumptions;
+package me.tktong.assumptions;
 
 import org.hamcrest.CoreMatchers;
 import org.junit.Assume;

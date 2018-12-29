@@ -1,4 +1,4 @@
-package me.tktong.annotations.assumptions;
+package me.tktong.assumptions;
 
 import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.Test;
