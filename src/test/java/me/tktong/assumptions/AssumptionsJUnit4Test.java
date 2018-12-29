@@ -4,18 +4,21 @@ import org.hamcrest.CoreMatchers;
 import org.junit.Assume;
 import org.junit.Test;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 /**
  * JUnit4 uses assumption methods from {@link org.junit.Assume}.
  */
 public class AssumptionsJUnit4Test {
     @Test
     public void assumeFalse() {
-        Assume.assumeFalse(false);
+        Assume.assumeFalse(true);
     }
 
     @Test
     public void assumeFalseWithMessage() {
-        Assume.assumeFalse("My message", false);
+        Assume.assumeFalse("My message", true);
     }
 
     @Test
@@ -38,26 +41,26 @@ public class AssumptionsJUnit4Test {
 
     @Test
     public void assumeNotNull() {
-        Assume.assumeNotNull(new Object());
+        Assume.assumeNotNull(null,null);
     }
 
     @Test
     public void assumeTrue() {
-        Assume.assumeTrue(true);
+        Assume.assumeTrue(false);
     }
 
     @Test
     public void assumeTrueWithMessage() {
-        Assume.assumeTrue("My message", true);
+        Assume.assumeTrue("My message", false);
     }
 
     @Test
     public void assumeThat() {
-        Assume.assumeThat("Actual", CoreMatchers.notNullValue());
+        Assume.assumeThat("Actual", CoreMatchers.endsWith("someSuffix"));
     }
 
     @Test
     public void assumeThatWithMessage(){
-        Assume.assumeThat("My message", "Actual", CoreMatchers.notNullValue());
+        Assume.assumeThat("My message", "Actual", CoreMatchers.endsWith("someSuffix"));
     }
 }

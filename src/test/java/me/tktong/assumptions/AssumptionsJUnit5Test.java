@@ -11,71 +11,71 @@ import org.junit.jupiter.api.Test;
 class AssumptionsJUnit5Test {
     @Test
     void assumeFalse() {
-        Assumptions.assumeFalse(false);
+        Assumptions.assumeFalse(true);
     }
 
     @Test
     void assumeFalseWithBooleanSupplier() {
-        Assumptions.assumeFalse(() -> false);
+        Assumptions.assumeFalse(() -> true);
     }
 
     @Test
     void assumeFalseWithBooleanSupplierAndMessage() {
-        Assumptions.assumeFalse(() -> false, "My message");
+        Assumptions.assumeFalse(() -> true, "My message");
     }
 
     @Test
     void assumeFalseWithBooleanSupplierAndMessageSupplier() {
-        Assumptions.assumeFalse(() -> false, () -> "My message");
+        Assumptions.assumeFalse(() -> true, () -> "My message");
     }
 
     @Test
     void assumeFalseWithMessage() {
-        Assumptions.assumeFalse(false, "My message");
+        Assumptions.assumeFalse(true, "My message");
     }
 
     @Test
     void assumeFalseWithMessageSupplier() {
-        Assumptions.assumeFalse(false, () -> "My message");
+        Assumptions.assumeFalse(true, () -> "My message");
     }
 
     @Test
     void assumeTrue() {
-        Assumptions.assumeTrue(true);
+        Assumptions.assumeTrue(false);
     }
 
     @Test
     void assumeTrueWithBooleanSupplier() {
-        Assumptions.assumeTrue(() -> true);
+        Assumptions.assumeTrue(() -> false);
     }
 
     @Test
     void assumeTrueWithBooleanSupplierAndMessage() {
-        Assumptions.assumeTrue(() -> true, "My message");
+        Assumptions.assumeTrue(() -> false, "My message");
     }
 
     @Test
     void assumeTrueWithBooleanSupplierAndMessageSupplier() {
-        Assumptions.assumeTrue(() -> true, () -> "My message");
+        Assumptions.assumeTrue(() -> false, () -> "My message");
     }
 
     @Test
     void assumeTrueWithMessage() {
-        Assumptions.assumeTrue(true, "My message");
+        Assumptions.assumeTrue(false, "My message");
     }
 
     @Test
     void assumeTrueWithMessageSupplier() {
-        Assumptions.assumeTrue(true, () -> "My message");
+        Assumptions.assumeTrue(false, () -> "My message");
     }
 
     @Test
     void assumingThat() {
-        Assumptions.assumingThat(true, () -> System.out.println("Some executable"));
+        Assumptions.assumingThat(false, () -> System.out.println("Some executable"));
     }
 
     @Test
     void assumingThatWithBooleanSupplier() {
-        Assumptions.assumingThat(() -> true, () -> System.out.println("Some executable"));
+        Assumptions.assumingThat(() -> false, () -> System.out.println("Some executable"));
     }
 }
