@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
  * there exists an assertEquals method for each of the primitives now whereas in JUnit4, it would rely on the long
  * implementation.
  */
-class AssertionsEqualsJUnit5Test {
+class AssertEqualsJUnit5Test {
     private static final String MESSAGE = "My message";
 
     @Test
