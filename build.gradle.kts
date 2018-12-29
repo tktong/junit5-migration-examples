@@ -16,3 +16,12 @@ dependencies {
     testRuntime(Dependencies.JUNIT_PLATFORM_LAUNCHER)
     testRuntime(Dependencies.JUNIT_VINTAGE_ENGINE)
 }
+
+tasks.withType<Test> {
+    useJUnitPlatform {
+        includeEngines("junit-jupiter","junit-vintage")
+    }
+    testLogging {
+        events("passed","skipped","failed")
+    }
+}
